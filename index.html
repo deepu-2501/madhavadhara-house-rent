@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#183b35">
 <title>3 BHK Fully Furnished Home for Rent | Madhavadhara</title>
+
 <style>
 :root {
   --site-primary: #183b35;
@@ -23,101 +25,440 @@
   --muted: #68736d;
   --line: #e7e5dc;
 }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); }
-#app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); border-radius: 0; }
-.topbar { background: var(--site-primary); color: var(--site-on-primary); padding: calc(18px * var(--site-spacing-scale)) 22px; }
-.topbar-inner { max-width: 1080px; margin: auto; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-.brand { font-weight:750; letter-spacing:.04em; font-size:14px; display:flex; gap:10px; align-items:center; }
-.brand-mark { width:34px;height:34px;border-radius:11px;background:var(--site-secondary);color:var(--site-on-secondary);display:grid;place-items:center;font-size:19px; }
-.availability { border:1px solid #ffffff55; border-radius:99px; padding:8px 12px; font-size:12px; color:#f2e8d3; }
-main { max-width:1080px; margin:auto; padding:28px 20px 52px; }
-.hero { display:grid; grid-template-columns:1.12fr .88fr; gap:24px; align-items:stretch; }
-.hero-copy { padding:24px 4px; display:flex; flex-direction:column; justify-content:center; }
-.eyebrow { color:#9a7440; text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:800; }
-h1 { font: 700 calc(42px * var(--site-heading-scale))/1.08 var(--site-font-heading); letter-spacing:-.035em; margin:14px 0 12px; color:var(--site-primary); }
-.location { color:var(--muted); display:flex; align-items:center; gap:7px; font-size:14px; }
-.summary { color:#56615a; line-height:1.7; max-width:510px; margin:18px 0 22px; }
-.price-row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-.price { font-size:30px; font-weight:800; color:var(--site-primary); }
-.price small { font-size:13px; color:var(--muted); font-weight:500; }
-.deposit { color:var(--muted); font-size:13px; border-left:1px solid var(--line); padding-left:13px; }
-.hero-art { min-height:340px; border-radius:calc(24px * var(--site-radius-scale)); overflow:hidden; position:relative; background:linear-gradient(145deg,#d9e1d7,#a9b9a9 52%,#667e70); display:flex; align-items:center; justify-content:center; }
-.gallery-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:12px; }
-.gallery-photo { margin:0;overflow:hidden;border-radius:14px;background:#e6e8e2;aspect-ratio:4/3;border:1px solid var(--line); }
-.gallery-photo img { display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease; }
-.gallery-photo:hover img { transform:scale(1.035); }
-.hero-art:before,.hero-art:after { content:"";position:absolute;border-radius:50%;background:#ffffff20;opacity:var(--site-decoration-opacity); }
-.hero-art:before { width:280px;height:280px;right:-70px;top:-90px; }
-.hero-art:after { width:180px;height:180px;left:-65px;bottom:-80px; }
-.house-illustration { width:76%; max-width:390px; position:relative; z-index:1; filter:drop-shadow(0 16px 18px #23382b30); }
-.photo-note { position:absolute;bottom:14px;left:16px;background:#17382fdc;color:white;padding:8px 11px;border-radius:99px;font-size:11px;z-index:2; }
-.stats { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 34px; }
-.stat { background:var(--surface);border:1px solid var(--line);border-radius:calc(15px * var(--site-radius-scale));padding:17px;text-align:center; }
-.stat strong { display:block;color:var(--site-primary);font-size:20px; }
-.stat span { display:block;color:var(--muted);font-size:12px;margin-top:4px; }
-.section { margin-top:34px; }
-.section-head { display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px; }
-h2 { font:700 calc(27px * var(--site-heading-scale))/1.15 var(--site-font-heading);color:var(--site-primary);margin:0; }
-.section-sub { color:var(--muted);font-size:13px;margin-top:6px; }
-.features { display:grid;grid-template-columns:repeat(3,1fr);gap:11px; }
-.feature { display:flex;gap:11px;align-items:center;padding:15px;background:var(--surface);border:1px solid var(--line);border-radius:calc(13px * var(--site-radius-scale));font-size:13px;font-weight:600; }
-.feature-icon { width:35px;height:35px;flex:0 0 35px;display:grid;place-items:center;background:#edf1e9;border-radius:11px;color:var(--site-primary);font-size:17px; }
-.note-grid { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
-.note-card { background:var(--surface);border:1px solid var(--line);border-radius:calc(15px * var(--site-radius-scale));padding:19px; }
-.note-card h3 {margin:0 0 12px;font-size:14px;color:var(--site-primary);}
-.note-card ul {padding-left:18px;margin:0;color:#59645d;font-size:13px;line-height:1.9;}
-.contact { margin-top:34px;background:var(--site-primary);color:white;border-radius:calc(20px * var(--site-radius-scale));padding:25px;display:flex;justify-content:space-between;align-items:center;gap:18px; }
-.contact h2 {color:white;font-size:26px;}
-.contact p {margin:7px 0 0;color:#d4dfd8;font-size:13px;line-height:1.5;}
-.contact-actions {display:flex;gap:9px;flex-wrap:wrap;}
-.btn {border:0;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:99px;font-size:13px;font-weight:750;cursor:pointer;}
-.btn-primary {background:var(--site-secondary);color:var(--site-on-secondary);}
-.btn-outline {border:1px solid #ffffff80;color:white;background:transparent;}
-.footer {text-align:center;color:var(--muted);font-size:11px;padding:24px 10px 0;}
-@media(max-width:720px) {
- main{padding:18px 15px 38px}.hero{grid-template-columns:1fr;gap:12px}.hero-copy{padding:14px 2px 8px}h1{font-size:36px}.hero-art{min-height:245px;order:-1}.stats{gap:8px;margin:19px 0 27px}.stat{padding:13px 6px}.stat strong{font-size:17px}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}.features{grid-template-columns:repeat(2,1fr)}.feature{padding:12px 10px;font-size:12px}.note-grid{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.contact-actions{width:100%}.contact-actions .btn{flex:1}
+
+body {
+  margin: 0;
+  font-family: var(--site-font-body);
+  background: var(--site-background);
+  color: var(--site-on-background);
 }
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--site-background);
+  color: var(--site-on-background);
+  border-radius: 0;
+}
+
+.topbar {
+  background: var(--site-primary);
+  color: var(--site-on-primary);
+  padding: calc(18px * var(--site-spacing-scale)) 22px;
+}
+
+.topbar-inner {
+  max-width: 1080px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  font-weight: 750;
+  letter-spacing: .04em;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: var(--site-secondary);
+  color: var(--site-on-secondary);
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+}
+
+.availability {
+  border: 1px solid #ffffff55;
+  border-radius: 99px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #f2e8d3;
+}
+
+main {
+  max-width: 1080px;
+  margin: auto;
+  padding: 28px 20px 52px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.12fr .88fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hero-copy {
+  padding: 24px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  color: #9a7440;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+h1 {
+  font: 700 calc(42px * var(--site-heading-scale))/1.08 var(--site-font-heading);
+  letter-spacing: -.035em;
+  margin: 14px 0 12px;
+  color: var(--site-primary);
+}
+
+.location {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+}
+
+.summary {
+  color: #56615a;
+  line-height: 1.7;
+  max-width: 510px;
+  margin: 18px 0 22px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--site-primary);
+}
+
+.price small {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.deposit {
+  color: var(--muted);
+  font-size: 13px;
+  border-left: 1px solid var(--line);
+  padding-left: 13px;
+}
+
+.hero-art {
+  min-height: 340px;
+  border-radius: calc(24px * var(--site-radius-scale));
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(145deg,#d9e1d7,#a9b9a9 52%,#667e70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+}
+
+.gallery-photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #e6e8e2;
+  aspect-ratio: 4/3;
+  border: 1px solid var(--line);
+}
+
+.gallery-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.035);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  margin: 26px 0 34px;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(15px * var(--site-radius-scale));
+  padding: 17px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  color: var(--site-primary);
+  font-size: 20px;
+}
+
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.section { margin-top: 34px; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font: 700 calc(27px * var(--site-heading-scale))/1.15 var(--site-font-heading);
+  color: var(--site-primary);
+  margin: 0;
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 11px;
+}
+
+.feature {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  padding: 15px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(13px * var(--site-radius-scale));
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.feature-icon {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  display: grid;
+  place-items: center;
+  background: #edf1e9;
+  border-radius: 11px;
+  color: var(--site-primary);
+  font-size: 17px;
+}
+
+.note-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.note-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(15px * var(--site-radius-scale));
+  padding: 19px;
+}
+
+.note-card h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--site-primary);
+}
+
+.note-card ul {
+  padding-left: 18px;
+  margin: 0;
+  color: #59645d;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.contact {
+  margin-top: 34px;
+  background: var(--site-primary);
+  color: white;
+  border-radius: calc(20px * var(--site-radius-scale));
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact h2 {
+  color: white;
+  font-size: 26px;
+}
+
+.contact p {
+  margin: 7px 0 0;
+  color: #d4dfd8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 17px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--site-secondary);
+  color: var(--site-on-secondary);
+}
+
+.btn-outline {
+  border: 1px solid #ffffff80;
+  color: white;
+  background: transparent;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  padding: 24px 10px 0;
+}
+
+@media(max-width:720px) {
+  main { padding: 18px 15px 38px; }
+  .hero { grid-template-columns: 1fr; gap: 12px; }
+  .hero-copy { padding: 14px 2px 8px; }
+  h1 { font-size: 36px; }
+  .hero-art { min-height: 245px; order: -1; }
+  .stats { gap: 8px; margin: 19px 0 27px; }
+  .stat { padding: 13px 6px; }
+  .stat strong { font-size: 17px; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); gap: 8px; }
+  .features { grid-template-columns: repeat(2,1fr); }
+  .feature { padding: 12px 10px; font-size: 12px; }
+  .note-grid { grid-template-columns: 1fr; }
+  .contact { align-items: flex-start; flex-direction: column; }
+  .contact-actions { width: 100%; }
+  .contact-actions .btn { flex: 1; }
+}
+
 @media(prefers-color-scheme:dark) {
- :root { --surface:#202923; --muted:#b5c0b8; --line:#3a4940; }
- .hero-copy .summary{color:#c3cec6}.deposit{border-color:var(--line)}.feature-icon{background:#34473b;color:#e5eddf}.note-card ul{color:#c0cbc3}.section-sub{color:var(--muted)}
+  :root {
+    --surface: #202923;
+    --muted: #b5c0b8;
+    --line: #3a4940;
+  }
+  .hero-copy .summary { color: #c3cec6; }
+  .deposit { border-color: var(--line); }
+  .feature-icon { background: #34473b; color: #e5eddf; }
+  .note-card ul { color: #c0cbc3; }
+  .section-sub { color: var(--muted); }
 }
 </style>
 </head>
+
 <body>
 <div id="app">
+
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="brand"><span class="brand-mark">⌂</span><span>YOUR NEXT HOME</span></div>
+    <div class="brand">
+      <span class="brand-mark">⌂</span>
+      <span>YOUR NEXT HOME</span>
+    </div>
     <span class="availability">● AVAILABLE FOR RENT</span>
   </div>
 </header>
+
 <main>
+
   <section class="hero">
     <div class="hero-copy">
       <div class="eyebrow">A spacious, fully furnished home</div>
       <h1>3 BHK Home<br>for Rent</h1>
-      <div class="location"><span>⌖</span> Madhavadhara, Visakhapatnam</div>
-      <p class="summary">A comfortable, ready-to-move-in home with essential furniture and fittings, located on the 3rd floor with dedicated parking space.</p>
-      <div class="price-row"><div class="price">₹38,000 <small>/ month</small></div><div class="deposit">Security deposit<br><strong>₹1,20,000</strong></div></div>
+      <div class="location">
+        <span>⌖</span> Madhavadhara, Visakhapatnam
+      </div>
+      <p class="summary">
+        A comfortable, ready-to-move-in home with essential furniture and fittings, located on the 3rd floor with dedicated parking space.
+      </p>
+      <div class="price-row">
+        <div class="price">₹38,000 <small>/ month</small></div>
+        <div class="deposit">
+          Security deposit<br>
+          <strong>₹1,20,000</strong>
+        </div>
+      </div>
     </div>
-    <div class="hero-art" role="img" aria-label="Illustration representing a modern home">
-      <svg class="house-illustration" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M38 133L210 25l172 108" fill="#f7f3e8" stroke="#304c3c" stroke-width="9" stroke-linejoin="round"/>
-        <path d="M72 126h276v145H72z" fill="#f7f3e8" stroke="#304c3c" stroke-width="8"/>
-        <path d="M100 153h77v66h-77zM243 153h77v66h-77z" fill="#9bb5ad" stroke="#304c3c" stroke-width="7"/>
-        <path d="M138 153v66m-38-33h77m104-33v66m-38-33h77" stroke="#304c3c" stroke-width="5"/>
-        <path d="M185 195h50v76h-50z" fill="#bd9560" stroke="#304c3c" stroke-width="7"/>
-        <circle cx="222" cy="236" r="3.5" fill="#f7f3e8"/>
-        <path d="M52 271h316" stroke="#304c3c" stroke-width="8" stroke-linecap="round"/>
-        <path d="M48 271l-13 17m337-17 13 17" stroke="#304c3c" stroke-width="5" stroke-linecap="round"/>
-      </svg>
-      <span class="photo-note">Property illustration · Add real photos before publishing</span>
+
+    <!-- Main living-room sofa photo -->
+    <div class="hero-art" role="img" aria-label="Living room with sofa seating">
+      <img class="hero-photo" src="images/40629.jpg" alt="Living room with sofa seating">
     </div>
   </section>
+
   <section class="section" aria-label="Property photo gallery">
-    <div class="section-head"><div><h2>Explore the Home</h2><div class="section-sub">A look at the bedrooms, living spaces, kitchen and balcony</div></div></div>
+    <div class="section-head">
+      <div>
+        <h2>Explore the Home</h2>
+        <div class="section-sub">A look at the bedrooms, living spaces, kitchen and balcony</div>
+      </div>
+    </div>
+
     <div class="gallery-grid">
       <figure class="gallery-photo"><img src="images/40647.jpg" alt="Furnished bedroom with bed and wardrobes" loading="lazy"></figure>
       <figure class="gallery-photo"><img src="images/40646.jpg" alt="Bedroom interior and storage" loading="lazy"></figure>
@@ -137,13 +478,21 @@ h2 { font:700 calc(27px * var(--site-heading-scale))/1.15 var(--site-font-headin
       <figure class="gallery-photo"><img src="images/40613.jpg" alt="Bedroom with attached storage" loading="lazy"></figure>
     </div>
   </section>
+
   <section class="stats" aria-label="Property summary">
     <div class="stat"><strong>3 BHK</strong><span>Bedrooms</span></div>
     <div class="stat"><strong>3rd Floor</strong><span>Floor level</span></div>
     <div class="stat"><strong>100 sq ft</strong><span>Parking space</span></div>
   </section>
+
   <section class="section">
-    <div class="section-head"><div><h2>Home Features</h2><div class="section-sub">Comfort and convenience, already in place</div></div></div>
+    <div class="section-head">
+      <div>
+        <h2>Home Features</h2>
+        <div class="section-sub">Comfort and convenience, already in place</div>
+      </div>
+    </div>
+
     <div class="features">
       <div class="feature"><span class="feature-icon">🛋</span>Sofa set</div>
       <div class="feature"><span class="feature-icon">❄</span>4 air conditioners</div>
@@ -156,18 +505,59 @@ h2 { font:700 calc(27px * var(--site-heading-scale))/1.15 var(--site-font-headin
       <div class="feature"><span class="feature-icon">↔</span>60 ft road frontage</div>
     </div>
   </section>
+
   <section class="section">
-    <div class="section-head"><div><h2>Good to Know</h2><div class="section-sub">Please review what is and isn't provided</div></div></div>
+    <div class="section-head">
+      <div>
+        <h2>Good to Know</h2>
+        <div class="section-sub">Please review what is and isn't provided</div>
+      </div>
+    </div>
+
     <div class="note-grid">
-      <div class="note-card"><h3>Included</h3><ul><li>Sofa set and cupboards</li><li>3 beds, mattresses and storage</li><li>4 ACs, 3 geysers and 8 fans</li><li>Kitchen chimney</li></ul></div>
-      <div class="note-card"><h3>Not provided</h3><ul><li>Stove</li><li>Washing machine</li><li>Water filter</li><li>Television</li><li>Refrigerator</li></ul></div>
+      <div class="note-card">
+        <h3>Included</h3>
+        <ul>
+          <li>Sofa set and cupboards</li>
+          <li>3 beds, mattresses and storage</li>
+          <li>4 ACs, 3 geysers and 8 fans</li>
+          <li>Kitchen chimney</li>
+        </ul>
+      </div>
+
+      <div class="note-card">
+        <h3>Not provided</h3>
+        <ul>
+          <li>Stove</li>
+          <li>Washing machine</li>
+          <li>Water filter</li>
+          <li>Television</li>
+          <li>Refrigerator</li>
+        </ul>
+      </div>
     </div>
   </section>
+
   <section class="contact">
-    <div><h2>Interested in this home?</h2><p>Call or WhatsApp the owner to arrange a visit.<br>Phone: +91 93985 54343</p></div>
-    <div class="contact-actions"><a class="btn btn-primary" href="tel:+919398554343">Call Owner</a><a class="btn btn-outline" href="https://wa.me/919398554343" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div>
+      <h2>Interested in this home?</h2>
+      <p>
+        Call or WhatsApp the owner to arrange a visit.<br>
+        Phone: +91 93985 54343
+      </p>
+    </div>
+
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="tel:+919398554343">Call Owner</a>
+      <a class="btn btn-outline" href="https://wa.me/919398554343" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </section>
-  <div class="footer">Rental listing · Madhavadhara, Visakhapatnam<br>Rent and availability are subject to confirmation by the owner.</div>
+
+  <div class="footer">
+    Rental listing · Madhavadhara, Visakhapatnam<br>
+    Rent and availability are subject to confirmation by the owner.
+  </div>
+
 </main>
 </div>
 </body>
